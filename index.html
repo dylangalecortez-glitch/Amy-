@@ -1,4 +1,3 @@
-index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +5,15 @@ index.html
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For Amy ❤️</title>
   <style>
-  .hello-kitty {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 120px;
-  z-index: 1000;
-}
+    .hello-kitty {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 120px;
+      z-index: 1000;
+    }
 
-
-  body}
-    <img src="giphy.gif" alt="Hello Kitty" class="hello-kitty">
-  body}
+    body {
       background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
       font-family: "Comic Sans MS", cursive, sans-serif;
       text-align: center;
@@ -80,7 +76,7 @@ index.html
 
   <!-- 🎶 Music -->
   <audio id="bg-music">
-    <source src="lovergirl (instrumental.mp3)" type="audio/mpeg">
+    <source src="lovergirl (instrumental).mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   <button onclick="toggleMusic()">🎵 Play / Pause Music</button>
@@ -99,9 +95,9 @@ index.html
     <button onclick="nextStep(3)">Next 🌟</button>
   </div>
 
- <div id="step4" class="hidden">
+  <div id="step4" class="hidden">
     <h2>I have a huge crush on you ya know? 😞</h2>
-    <button onclick="nextStep(3)">Next 🌟</button>
+    <button onclick="nextStep(4)">Next 🌟</button>
   </div>
 
   <div id="step5" class="hidden">
@@ -115,12 +111,14 @@ index.html
       I really love you… and I’d love to be your girlfriend. 💕  
       I wanna be with you through the end just let me be the one for u🌹
     </p>
+    <!-- Hello Kitty GIF at the bottom -->
+    <img src="giphy.gif" alt="Hello Kitty" class="hello-kitty">
   </div>
 
   <script>
     function nextStep(step) {
       document.getElementById("step" + step).classList.add("hidden");
-      if (step === 4) {
+      if (step === 5) {
         document.getElementById("final").classList.remove("hidden");
       } else {
         document.getElementById("step" + (step + 1)).classList.remove("hidden");
