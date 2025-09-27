@@ -18,11 +18,9 @@
       color: #333;
       margin: 0;
     }
-
     h1, h2, p {
       animation: fadeIn 2s ease-in;
     }
-
     button {
       background-color: #ff6699;
       color: white;
@@ -38,11 +36,7 @@
       background-color: #ff3366;
       transform: scale(1.05);
     }
-
-    .hidden {
-      display: none;
-    }
-
+    .hidden { display: none; }
     .hearts {
       position: fixed;
       top: 0;
@@ -53,7 +47,6 @@
       overflow: hidden;
       z-index: -1;
     }
-
     .heart {
       position: absolute;
       bottom: -50px;
@@ -61,23 +54,35 @@
       color: #ff4d88;
       animation: floatUp 6s linear infinite;
     }
-
     @keyframes floatUp {
       0% { transform: translateY(0); opacity: 1; }
       100% { transform: translateY(-100vh); opacity: 0; }
     }
-
     @keyframes fadeIn {
       from {opacity: 0;}
       to {opacity: 1;}
     }
 
-    /* Hello Kitty fixed bottom */
+    /* Cute gifs */
     .hello-kitty {
       position: fixed;
       bottom: 20px;
       right: 20px;
       width: 120px;
+      z-index: 1000;
+    }
+    .bow {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      z-index: 1000;
+    }
+    .strawberry {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 100px;
       z-index: 1000;
     }
   </style>
@@ -100,23 +105,58 @@
   </div>
 
   <div id="step2" class="hidden">
-    <h2>Thank u for making me smile everyday 😊</h2>
+    <h2>Hello my love 😊</h2>
     <button onclick="nextStep(2)">Next 💕</button>
   </div>
 
   <div id="step3" class="hidden">
-    <h2>I feel so lucky to have met someone like u 🌸</h2>
-    <button onclick="nextStep(3)">Next 🌟</button>
+    <h2>Thank you for making me smile everyday🙈</h2>
+    <button onclick="nextStep(3)">Next 💕</button>
   </div>
 
   <div id="step4" class="hidden">
-    <h2>I have a huge crush on you ya know? 😞</h2>
+    <h2>I feel so lucky to have met someone like u 🌸</h2>
     <button onclick="nextStep(4)">Next 🌟</button>
   </div>
 
   <div id="step5" class="hidden">
+    <h2>I have a huge crush on you ya know? 😞</h2>
+    <button onclick="nextStep(5)">Next 🌟</button>
+  </div>
+
+  <div id="step6" class="hidden">
+    <h2>you're probably suprised how i made this😝</h2>
+    <button onclick="nextStep(6)">Reveal 💖</button>
+  </div>
+
+  <div id="step7" class="hidden">
+    <h2>Malakas ka kasi sakin hehe</h2>
+    <button onclick="nextStep(7)">Reveal 💖</button>
+  </div>
+  
+  <div id="step8" class="hidden">
+    <h2>I could never ask for anything more kasi..</h2>
+    <button onclick="nextStep(8)">Reveal 💖</button>
+  </div>
+  
+   <div id="step9" class="hidden">
+    <h2>Ikaw na yan ih:< </h2>
+    <button onclick="nextStep(9)">Reveal 💖</button>
+  </div>
+  
+   <div id="step9" class="hidden">
+    <h2>You're everything to me babi</h2>
+    <button onclick="nextStep(9)">Reveal 💖</button>
+  </div>
+  
+  <div id="step10" class="hidden">
     <h2>And there’s something that has been on my mind…</h2>
-    <button onclick="nextStep(5)">Reveal 💖</button>
+    <button onclick="nextStep(10)">Reveal 💖</button>
+  </div>
+  
+<div id="step11" class="hidden">
+    <h2>Alam mo na siguro toh hehe</h2>
+    <button onclick="nextStep(11)">Reveal 💖</button>
   </div>
 
   <div id="final" class="hidden">
@@ -125,8 +165,10 @@
       I really love you… and I’d love to be your girlfriend. 💕  
       I wanna be with you through the end just let me be the one for u🌹
     </p>
-    <!-- Hello Kitty GIF -->
-    <img src="giphy.gif" alt="Hello Kitty" class="hello-kitty">
+    <!-- Cute decorations -->
+    <img src="https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif" alt="Hello Kitty" class="hello-kitty">
+    <img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="Bow" class="bow">
+    <img src="https://media.giphy.com/media/26gscSULUcfKU7dH6/giphy.gif" alt="Strawberry" class="strawberry">
   </div>
 
   <script>
