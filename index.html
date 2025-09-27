@@ -20,6 +20,7 @@
     }
     h1, h2, p {
       animation: fadeIn 2s ease-in;
+      text-align: center;
     }
     button {
       background-color: #ff6699;
@@ -70,13 +71,11 @@
       right: 20px;
       width: 120px;
       z-index: 1000;
+      animation: dance 2s infinite alternate;
     }
-    .bow {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      width: 100px;
-      z-index: 1000;
+    @keyframes dance {
+      from { transform: rotate(-5deg) scale(1); }
+      to { transform: rotate(5deg) scale(1.05); }
     }
     .strawberry {
       position: fixed;
@@ -100,6 +99,7 @@
   </audio>
   <button onclick="toggleMusic()">🎵 Play / Pause Music</button>
 
+  <!-- Steps -->
   <div id="step1">
     <button onclick="nextStep(1)">Click me</button>
   </div>
@@ -110,7 +110,7 @@
   </div>
 
   <div id="step3" class="hidden">
-    <h2>Thank you for making me smile everyday🙈</h2>
+    <h2>Thank you for making me smile everyday 🙈</h2>
     <button onclick="nextStep(3)">Next 💕</button>
   </div>
 
@@ -125,56 +125,57 @@
   </div>
 
   <div id="step6" class="hidden">
-    <h2>you're probably suprised how i made this😝</h2>
-    <button onclick="nextStep(6)">Reveal 💖</button>
+    <h2>You're probably suprised how I made this 😝</h2>
+    <button onclick="nextStep(6)">Next 💖</button>
   </div>
 
   <div id="step7" class="hidden">
-    <h2>Malakas ka kasi sakin hehe</h2>
-    <button onclick="nextStep(7)">Reveal 💖</button>
-  </div>
-  
-  <div id="step8" class="hidden">
-    <h2>I could never ask for anything more kasi..</h2>
-    <button onclick="nextStep(8)">Reveal 💖</button>
-  </div>
-  
-   <div id="step9" class="hidden">
-    <h2>Ikaw na yan ih:< </h2>
-    <button onclick="nextStep(9)">Reveal 💖</button>
-  </div>
-  
-   <div id="step9" class="hidden">
-    <h2>You're everything to me babi</h2>
-    <button onclick="nextStep(9)">Reveal 💖</button>
-  </div>
-  
-  <div id="step10" class="hidden">
-    <h2>And there’s something that has been on my mind…</h2>
-    <button onclick="nextStep(10)">Reveal 💖</button>
-  </div>
-  
-<div id="step11" class="hidden">
-    <h2>Alam mo na siguro toh hehe</h2>
-    <button onclick="nextStep(11)">Reveal 💖</button>
+    <h2>Malakas ka kasi sakin hehe 💕</h2>
+    <button onclick="nextStep(7)">Next 💖</button>
   </div>
 
+  <div id="step8" class="hidden">
+    <h2>I could never ask for anything more kasi.. 🌷</h2>
+    <button onclick="nextStep(8)">Next 💖</button>
+  </div>
+
+  <div id="step9" class="hidden">
+    <h2>Ikaw na yan ih :&lt; 💗</h2>
+    <button onclick="nextStep(9)">Next 💖</button>
+  </div>
+
+  <div id="step10" class="hidden">
+    <h2>You're everything to me babi 🌹</h2>
+    <button onclick="nextStep(10)">Next 💖</button>
+  </div>
+
+  <div id="step11" class="hidden">
+    <h2>And there’s something that has been on my mind…</h2>
+    <button onclick="nextStep(11)">Next 💖</button>
+  </div>
+
+  <div id="step12" class="hidden">
+    <h2>Alam mo na siguro toh hehe 🥰</h2>
+    <button onclick="nextStep(12)">Final 💖</button>
+  </div>
+
+  <!-- Final -->
   <div id="final" class="hidden">
     <h2>Dear Amy,</h2>
     <p>
       I really love you… and I’d love to be your girlfriend. 💕  
-      I wanna be with you through the end just let me be the one for u🌹
+      I wanna be with you through the end, just let me be the one for u 🌹
     </p>
-    <!-- Cute decorations -->
-    <img src="https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif" alt="Hello Kitty" class="hello-kitty">
-    <img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="Bow" class="bow">
-    <img src="https://media.giphy.com/media/26gscSULUcfKU7dH6/giphy.gif" alt="Strawberry" class="strawberry">
   </div>
+
+  <!-- Cute decorations always visible -->
+  <img src="https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif" alt="Hello Kitty" class="hello-kitty">
+  <img src="strawberry.gif" alt="Strawberry" class="strawberry">
 
   <script>
     function nextStep(step) {
       document.getElementById("step" + step).classList.add("hidden");
-      if (step === 5) {
+      if (step === 12) {
         document.getElementById("final").classList.remove("hidden");
       } else {
         document.getElementById("step" + (step + 1)).classList.remove("hidden");
